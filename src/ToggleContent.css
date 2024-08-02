@@ -1,85 +1,72 @@
-body {
+.toggle-content {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: 60%;
+}
+
+.toggle-content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; 
-  margin: 0; 
-  background-color: #f0f0f0; 
-}
-
-.toggle-container {
-  width: 80%;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #fff;
-  flex-direction: column;
-  padding: 15px; 
-  box-sizing: border-box;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  height: 100vh; 
 }
 
 .toggle-header {
-  cursor: pointer;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  height: 60px; 
-  border-bottom: 1px solid #ddd;
-  background-color: #f9f9f9;
-  border-radius: 5px; 
-  box-sizing: border-box; 
-  width: 100%;
+  cursor: pointer;
 }
 
 .toggle-header h2 {
-  flex-grow: 1;
-  font-weight: normal; 
-  font-size: 18px;
-  color: black; 
-}
-
-.toggle-header span {
-  font-size: 1.5em; 
-}
-
-.toggle-content {
-  padding: 15px;
-  display: none;
-}
-
-.toggle-content.open {
-  display: block;
-}
-
-.toggle-content p {
+  font-size: 16px;
   margin: 0;
-  font-size: 16px; 
-  color: black;
+}
+
+.toggle-icon {
+  font-size: 18px;
+  color: #000000;
+}
+
+.toggle-body {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+  height: 60px;
+}
+
+.toggle-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 1024px) {
+  .toggle-content {
+    width: 70%;
+  }
 }
 
 @media (max-width: 768px) {
-  .toggle-header {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto; 
-  }
-
-  .toggle-header h2 {
-    padding-right: 0;
-    padding-bottom: 5px; 
-  }
-
-  .toggle-header span {
-    align-self: flex-end;
+  .toggle-content {
+    width: 80%;
   }
 }
 
 @media (max-width: 480px) {
-  .toggle-header {
-    padding: 12px;
+  .toggle-content {
+    width: 90%;
+  }
+  
+  .toggle-header h2 {
+    font-size: 14px;
   }
 
-  .toggle-content {
-    padding: 12px;
+  .toggle-body p {
+    font-size: 12px;
   }
 }
